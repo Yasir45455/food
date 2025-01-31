@@ -28,9 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 // Parse application/json
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send("App is Running");
-});
+app.get('/', productRoutes);
 
 
 app.use('/auth' , authRoutes)
