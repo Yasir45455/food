@@ -28,8 +28,9 @@ app.use(express.urlencoded({ extended: true }));
 // Parse application/json
 app.use(express.json());
 
-app.get('/', productRoutes);
-
+app.get('/', (req, res) => {
+  res.send('Welcome Brother');
+});
 
 app.use('/auth' , authRoutes)
 app.use('/products' , productRoutes) 
