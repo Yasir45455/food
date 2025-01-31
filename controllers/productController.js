@@ -12,6 +12,8 @@ exports.createProduct = async (req, res) => {
 };
 
 exports.getProducts = async (req, res) => {
+    console.log('Fetching products...');
+
   try {
     const products = await productService.getProducts();
     res.status(200).json(products);
