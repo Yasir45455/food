@@ -39,4 +39,4 @@ app.use('/promotions' , promotionRoutes)
 app.use('/promoimages' , promoImagesRoute)
 
 
-app.listen(port, () => console.log(`App is Running in ${port}.`));
+module.exports = app;
