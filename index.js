@@ -28,6 +28,11 @@ app.use(express.urlencoded({ extended: true }));
 // Parse application/json
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send("App is Running");
+});
+
+
 app.use('/auth' , authRoutes)
 app.use('/products' , productRoutes) 
 app.use('/category' , categoryRoutes)
