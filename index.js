@@ -19,8 +19,7 @@ const promoImagesRoute = require('./routes/promoImages')
 const app = express()
 app.use(cors({ origin: 'http://localhost:3000' }));
 
-port = 3001 ;
-
+const port = process.env.PORT || 3001;
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Parse application/x-www-form-urlencoded
